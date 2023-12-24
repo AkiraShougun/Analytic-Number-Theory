@@ -1,10 +1,9 @@
-const navbar = document.querySelector('#navbar');
-let top = navbar.offsetTop;
+
 function stickynavbar() {
-  if (window.scrollY >= top) {    
-    navbar.classList.add('sticky');
+  if (window.scrollY >= document.querySelector('.nav_section').offsetTop) {    
+    document.querySelector('.nav_section').classList.add('sticky');
   } else {
-    navbar.classList.remove('sticky');    
+    document.querySelector('.nav_section').classList.remove('sticky');    
   }
 }
 window.addEventListener('scroll', stickynavbar);

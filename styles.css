@@ -5,6 +5,11 @@
 
 .nav_li a{
     text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.nav_li a:hover{
+    color: grey;
 }
 
 .nav_ul{
@@ -25,11 +30,12 @@ body{
 }
 
 .nav_section{
+    z-index:3;
     margin: 0;
     overflow:hidden;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     max-width: 100%;
-    box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.4)
+    box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.4);
 }
 
 .nav_section a{
