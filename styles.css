@@ -60,16 +60,12 @@ body{
     z-index:0;
 }
 
-.title_img{
-    z-index:1;
+
+h1,p{
+    font-family:math;
+    margin-left:1%;
+}
+
+h1{
     text-align: center;
-    position: absolute;
-    left: 40%;
-    padding: 0 5px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-size: 2em;
-    bottom: 20%;
-    color:white;
-    font-family: math;
 }
