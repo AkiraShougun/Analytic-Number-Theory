@@ -16,10 +16,6 @@
     display: block;
 }
 
-.logo_image{
-    height: auto;
-    max-width: 100px;
-}
 
 p{
     font-size: 1.5rem;
@@ -64,12 +60,12 @@ body{
 }
 
 
-h1,p{
+h1,h2,h3,h4,h5,h6,p{
     font-family:math;
     margin:1rem 5%;
 }
 
-h1{
+h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
@@ -88,3 +84,5 @@ h1{
         top:10vw;
     }
 }
+
+
