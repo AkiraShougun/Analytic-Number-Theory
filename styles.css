@@ -22,7 +22,9 @@
 }
 
 p{
-    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
 }
 
 body{
@@ -35,7 +37,7 @@ body{
     overflow:hidden;
     background-color: rgb(255, 255, 255);
     max-width: 100%;
-    box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .nav_section a{
@@ -49,23 +51,40 @@ body{
 }
 
 .context{
-    background-color: rgb(250,250,250);
+    background-color: rgb(255, 255, 255);
     border-bottom: solid;
     border-color: black;
 }
 
 .zeta_img{
-    max-width: 100%;
+    width: 100%;
     opacity:0.7;
     z-index:0;
+    min-width:700px;
 }
 
 
 h1,p{
     font-family:math;
-    margin-left:1%;
+    margin:1rem 5%;
 }
 
 h1{
     text-align: center;
+}
+
+.image_text{
+    position: absolute;
+    top:40vw;
+    text-align: center;
+    width: 100%;
+    color:white;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 1px;
+    font-size: 3rem;
+}
+@media screen and (max-width:560px){
+    .image_text{
+        top:10vw;
+    }
 }

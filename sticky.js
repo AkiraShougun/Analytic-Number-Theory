@@ -1,9 +1,14 @@
+window.onload = function(){
 
-function stickynavbar() {
-  if (window.scrollY >= document.querySelector('.nav_section').offsetTop) {    
-    document.querySelector('.nav_section').classList.add('sticky');
-  } else {
-    document.querySelector('.nav_section').classList.remove('sticky');    
+  
+  const navbar = document.querySelector('.nav_section')
+  
+  function stickynavbar() {
+    if (window.scrollY >= document.querySelector('.nav_section').offsetTop) {    
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');    
+    }
   }
+  window.addEventListener('scroll', stickynavbar);
 }
-window.addEventListener('scroll', stickynavbar);
