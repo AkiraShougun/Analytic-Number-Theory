@@ -1,18 +1,18 @@
-.nav_li {
+.nav-li {
     display: inline;
     font-size: 20px;
 }
 
-.nav_li a{
+.nav-li a{
     text-decoration: none;
     color:rgb(0, 0, 0);
 }
 
-.nav_li a:hover{
+.nav-li a:hover{
     color: rgb(0, 208, 255);
 }
 
-.nav_ul{
+.nav-ul{
     display: block;
 }
 
@@ -30,7 +30,7 @@ body{
     overflow-x: hidden;
 }
 
-.nav_section{
+.nav-section{
     z-index:3;
     margin: 0;
     overflow:hidden;
@@ -39,12 +39,12 @@ body{
     box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
-.nav_section a{
+.nav-section a{
     margin: 20px;
     color: white;
 }
 
-.logo_text{
+.logo-text{
     font-size:20px;
     display: inline;
     font-family: math;
@@ -56,10 +56,12 @@ body{
     border-color: black;
 }
 
-.zeta_img{
+.zeta-img{
     width: 100%;
     z-index:0;
     min-width:700px;
+    height: 100%;
+    background-size: cover;
 }
 
 
@@ -73,7 +75,7 @@ h1,h2,h3,h4,h5,h6{
     color:#ddd;
 }
 
-.image_text{
+.image-text{
     position: absolute;
     top:40vw;
     text-align: center;
@@ -84,7 +86,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 3rem;
 }
 @media screen and (max-width:560px){
-    .image_text{
+    .image-text{
         top:10vw;
     }
 }
@@ -93,7 +95,11 @@ h1,h2,h3,h4,h5,h6{
     color:rgb(0, 208, 255);
 }
 
-.highlight_hover:hover{
-    color:rgb(0, 208, 255);
+.footer{
+    background-color: #141414;
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 

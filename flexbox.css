@@ -1,4 +1,4 @@
-.section_list{
+.section-list{
     max-width: 100%;
 }
 
@@ -42,4 +42,9 @@
     flex-direction: row-reverse;
 }
 
+
+.header{
+    border-bottom:5px solid rgb(0, 208, 255);
+    padding-bottom: 1rem;
+}
 

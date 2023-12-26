@@ -1,10 +1,10 @@
 window.onload = function(){
 
   
-  const navbar = document.querySelector('.nav_section')
+  const navbar = document.querySelector('.nav-section')
   
   function stickynavbar() {
-    if (window.scrollY >= document.querySelector('.nav_section').offsetTop) {    
+    if (window.scrollY >= document.querySelector('.nav-section').offsetTop) {    
       navbar.classList.add('sticky');
     } else {
       navbar.classList.remove('sticky');    
