@@ -9,7 +9,7 @@
 }
 
 .nav_li a:hover{
-    color: grey;
+    color: rgb(0, 208, 255);
 }
 
 .nav_ul{
@@ -20,24 +20,28 @@
 p{
     font-size: 1.5rem;
     line-height: 2rem;
+    color:#ddddddb2;
 
 }
 
 body{
+    background-color: #191919;
     margin:0;
+    overflow-x: hidden;
 }
 
 .nav_section{
     z-index:3;
     margin: 0;
     overflow:hidden;
-    background-color: rgb(255, 255, 255);
+    background-color: #141414;
     max-width: 100%;
     box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .nav_section a{
     margin: 20px;
+    color: white;
 }
 
 .logo_text{
@@ -47,14 +51,13 @@ body{
 }
 
 .context{
-    background-color: rgb(255, 255, 255);
+    background-color: #191919;
     border-bottom: solid;
     border-color: black;
 }
 
 .zeta_img{
     width: 100%;
-    opacity:0.7;
     z-index:0;
     min-width:700px;
 }
@@ -67,6 +70,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 h1,h2,h3,h4,h5,h6{
     text-align: center;
+    color:#ddd;
 }
 
 .image_text{
@@ -85,4 +89,11 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+.highlighter{
+    color:rgb(0, 208, 255);
+}
+
+.highlight_hover:hover{
+    color:rgb(0, 208, 255);
+}
 
