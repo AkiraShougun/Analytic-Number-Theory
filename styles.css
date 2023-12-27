@@ -75,16 +75,7 @@ h1,h2,h3,h4,h5,h6{
     color:#ddd;
 }
 
-.image-text{
-    position: absolute;
-    top:40vw;
-    text-align: center;
-    width: 100%;
-    color:white;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
-    -webkit-text-stroke-width: 1px;
-    font-size: 3rem;
-}
+
 @media screen and (max-width:560px){
     .image-text{
         top:10vw;
@@ -101,5 +92,10 @@ h1,h2,h3,h4,h5,h6{
     padding: 0;
     height: 100%;
     width: 100%;
+}
+
+.githubacc{
+    text-decoration: none;
+    color: rgb(0, 208, 255);
 }
 

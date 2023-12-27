@@ -17,7 +17,7 @@ y_val = imag(spectrum)
 
 theme(:dracula)
 
-p = plot(x_val,y_val,legend=false,framestyle=:origin,color="cyan")
+p = plot(x_val,y_val,legend=false,framestyle=:origin,color="cyan",background_color=:transparent)
 
 
 savefig(p,"static/zetamodified.png")
