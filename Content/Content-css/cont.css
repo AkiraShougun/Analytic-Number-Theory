@@ -1,0 +1,66 @@
+.chapters{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    scrollbar-color: red;
+
+}
+
+.content-list{
+    border:solid;
+    background-color: #141414;
+    height:20rem;;
+    width:20rem;
+    margin:1rem;
+    display: flex;
+    flex:0 0 auto;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.headers{
+    text-align: left;
+    border-bottom:5px solid rgb(0, 208, 255);
+    align-self: flex-start;
+}
+
+.parag-content{
+    flex: 1 1 auto;
+    overflow: wrap;
+    flex-wrap: wrap;
+    white-space: wrap;
+}
+
+.button-content{
+    align-self:bottom;
+    margin: 0rem 3rem 1rem 3rem;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    border: 3px solid rgb(0, 208, 255);
+    background-color: #252525;
+    color:white;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.button-content:hover{
+    background-color: #3d3d3d;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #fff;
+    box-shadow: inset 0 0 2px #777;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 208, 255);
+  }
+
+
