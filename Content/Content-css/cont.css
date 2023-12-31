@@ -4,7 +4,6 @@
     overflow: auto;
     white-space: nowrap;
     justify-content: flex-start;
-    scrollbar-color: red;
 
 }
 
@@ -34,7 +33,7 @@
 }
 
 .button-content{
-    align-self:bottom;
+    display:flex;
     margin: 0rem 3rem 1rem 3rem;
     flex-grow: 1;
     font-size: 1.5rem;
@@ -43,6 +42,11 @@
     color:white;
     border-radius: 10px;
     cursor:pointer;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .button-content:hover{

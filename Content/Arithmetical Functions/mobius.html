@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../Content-css/chapter.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Analytic Number Theory</title>
 </head>
 <body>
-    
+    <div class="nav-section">
+        <ul class="nav-ul">
+            <li class="nav-li">
+                <a href="../../index.html" class="logo-text">Analytic Number Theory</a>
+            </li>
+            <li class="nav-li">
+                <a href="../content.html">Content</a>
+            </li>
+        </ul>
+    </div>
+    <div class="chapter-content">
+        <h1 class="border-header">The Mobius Function </h1>
+        <p>Number theory is often concerned with sequences of real or complex numbers.
+            We call such sequences, <strong>arithmetical functions.</strong>
+        </p>
+        <div class="def-proof">
+            <h2 class="border-header"><b>Definition</b> </h2>
+            <p>The mobius function \(\mu\) is defined as follows:
+                \[\mu(1)=1;\]
+                If \(n>1\), write \(n = p_1^{a_1}\cdots p_k^{a_k}\).Then
+                \[\mu(n)=(-1)^k \text{ if } a_1=\cdots=a_k=1\]
+                \[\mu(n)=0 \text{ otherwise.}\]
+
+            </p>
+        </div>
+        <p>Notice that \(\mu(n) = 0 \) if and only if n has a square factor > 1.</p>
+        <p>Here is a little table for the values of \(\mu(n):\)</p>
+        <table>
+            <tr>
+                <th><p>\(n:\)</p></th>
+                <th><p>1</p></th>
+                <th><p>2</p></th>
+                <th><p>3</p></th>
+                <th><p>4</p></th>
+                <th><p>5</p></th>
+                <th><p>6</p></th>
+                <th><p>7</p></th>
+                <th><p>8</p></th>
+                <th><p>9</p></th>
+                <th><p>10</p></th>
+                
+            </tr>
+            <tr>
+                <th><p>\(\mu(n):\)</p></th>
+                <th><p>1</p></th>
+                <th><p>-1</p></th>
+                <th><p>-1</p></th>
+                <th><p>0</p></th>
+                <th><p>-1</p></th>
+                <th><p>1</p></th>
+                <th><p>-1</p></th>
+                <th><p>0</p></th>
+                <th><p>0</p></th>
+                <th><p>1</p></th>
+            </tr>
+        </table>
+        <div class="code-section">
+            <pre>
+                <code>
+                    def isPrime(n) :
+ 
+    if (n < 2) :
+        return False
+    for i in range(2, n + 1) :
+        if (i * i <= n and n % i == 0) :
+            return False
+    return True
+ 
+def mobius(N) :
+     
+    # Base Case
+    if (N == 1) :
+        return 1
+ 
+    # For a prime factor i
+    # check if i^2 is also
+    # a factor.
+    p = 0
+    for i in range(1, N + 1) :
+        if (N % i == 0 and
+                isPrime(i)) :
+ 
+            # Check if N is
+            # divisible by i^2
+            if (N % (i * i) == 0) :
+                return 0
+            else :
+ 
+                # i occurs only once,
+                # increase f
+                p = p + 1
+ 
+    # All prime factors are
+    # contained only once
+    # Return 1 if p is even
+    # else -1
+    if(p % 2 != 0) :
+        return -1
+    else :
+        return 1
+ 
+# Driver Code
+print("Mobius numbers from 1..99:")
+      
+for i in range(1, 100):
+  print(f"{mobius(i):>4}", end = '')
+
+  if i % 20 == 0: print()
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div>
+        <h2>References</h2>
+        <p>1. Apostol, T. M. Introduction to analytic number theory; Springer: New York, 2011. </p>
+        <p>2. <a href="https://rosettacode.org/wiki/M%C3%B6bius_function#Python">https://rosettacode.org/wiki/M%C3%B6bius_function#Python</a></p>
+    </div>
 </body>
 </html>

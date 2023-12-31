@@ -1,0 +1,32 @@
+.chapter-content h1,h2,h3,h4,h5,h6,p{
+    text-align: left;
+    margin-left:3rem;
+    font-weight: 100;
+
+}
+
+p{
+    font-size:large;
+}
+
+b{
+    font-weight: 900;
+}
+
+.border-header{
+    border-bottom: solid;
+    border-color: rgb(0, 208, 255);
+}
+
+.def-proof,.code-section{
+    background-color: #2b2b2b;
+    margin:2rem 2rem 1rem 2rem;
+    border-color: rgb(0, 208, 255);
+    border-style: solid;
+    overflow: hidden;
+}
+
+.def-proof h2{
+    display:inline-block;
+}
+
