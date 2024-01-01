@@ -43,7 +43,4 @@ def mobius(N) :
 # Driver Code
 print("Mobius numbers from 1..99:")
       
-for i in range(1, 100):
-  print(f"{mobius(i):>4}", end = '')
-
-  if i % 20 == 0: print()
+print(mobius(3))
