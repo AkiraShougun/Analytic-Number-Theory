@@ -79,7 +79,53 @@
                 </pre>
             </div>
         </div>
+        <p>The python program was directly taken from <a href="https://rosettacode.org/wiki/M%C3%B6bius_function#Python">here</a>. While the Julia code is a translation of the python code.</p>
+        <p>Until now, we only have introduced the Mobius function and now you might wonder,
+        "what's the point of using such a function? Why is it used in analytic number theory?" <br>
+        Well, from now on we will introduce theorems regarding this function that will help us
+        eventually solve more complex problems very easily.
+        </p>
+        <div class="def-proof">
+            <h2 class="border-header"><b>Theorem 1.1</b> </h2>
+            <p>
+                \(\forall n \ge 1,\)
+                \[\sum_{d|n}\mu(d)= \left\lfloor \frac{1}{n} \right\rfloor 
+                = \left\{ \begin{array}{cl}
+                1 & : \ n = 1. \\
+                0 & : \ n > 1.
+                \end{array} \right.
+                \]
+            </p>
+        </div>
+        <div class="def-proof">
+            <h2 class="border-header"><b>Proof.</b> </h2>
+            <p>
+                It is trivial to see that the formula is clearly true if n=1. <br>
+                Assume, then, that n>1 and write, by the fundamental theorem of arithmetic,
+                \[n=p_1^{a_1} \cdots p_k^{a_k}\]
+                In the sum \(\sum_{d|n}μ(d)\)
+                the only non-zero terms come from d=1
+                and the divisors of n
+                which are products of distinct primes. Thus,
+                \[\sum_{d|n}\mu(d)=\mu(1)+\mu(p_1)+\cdots+\mu(p_k)+\mu(p_1p_2)+\cdots+\mu(p_{k-1}p_k)+\cdots+\mu(p_1p_2\cdots p_k)\\
+=1+\binom{k}{1}(-1)+\binom{k}{1}(-1)^2+ \cdots+\binom{k}{k}(-1)^k=(1-1)^k=0 \text{.   } \square \] 
+            </p>
+        </div>
+        <p>Now with that out of the way. It's time to test our understanding of what we learned. </p>
+        <div class="def-proof">
+            <h2 class="border-header"><b>Exercise.</b> </h2>
+            <p>Which of the following is the right answer for \(\sum_{d|gcd(2024,2023)}\mu(d):\)</p>
+            <section class="radio-section">
+                <div class="radio-list">
+                    <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">0</label></div>
+                    <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">1</label></div>
+                    <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">2023</label></div>
+                    <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">2024</label></div>
+                </div>
+            </section> 
+        </div>
     </div>
+
     <div>
         <h2>References</h2>
         <p>1. Apostol, T. M. Introduction to analytic number theory; Springer: New York, 2011. </p>
@@ -92,9 +138,11 @@
             border-left:solid rgb(0, 208, 255);
             border-bottom: none;
             background-color: #2b2b2b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
 
         }
-    </style>
+    </style
     
 </body>
 </html>
