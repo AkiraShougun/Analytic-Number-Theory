@@ -1,0 +1,10 @@
+.change{
+    border-top:solid rgb(0, 208, 255);
+    border-right:solid rgb(0, 208, 255);
+    border-left:solid rgb(0, 208, 255);
+    border-bottom: none;
+    background-color: #2b2b2b;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
