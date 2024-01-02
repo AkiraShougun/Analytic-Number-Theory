@@ -71,8 +71,8 @@
         </table>
         <div class="code-div">
             <div class="code-btn">
-                <a id="python-button">Python</a>
-                <a id="julia-button">Julia</a>
+                <a id="python-button" >Python</a>
+                <a id="julia-button" >Julia</a>
             </div>
             <div class="code-section">
                 <pre id = "code-input">
@@ -85,35 +85,50 @@
         <p>1. Apostol, T. M. Introduction to analytic number theory; Springer: New York, 2011. </p>
         <p>2. <a href="https://rosettacode.org/wiki/M%C3%B6bius_function#Python">https://rosettacode.org/wiki/M%C3%B6bius_function#Python</a></p>
     </div>
-    <script src="../Content-js/fetching.js"></script>
-    <!--
-    <script>
-        const pyButton = document.getElementById("python-button")
-        const jlButton = document.getElementById("julia-button")
-        const parag = document.getElementById("code-input")
+    <style>
+        .change{
+            border-top:solid rgb(0, 208, 255);
+            border-right:solid rgb(0, 208, 255);
+            border-left:solid rgb(0, 208, 255);
+            border-bottom: none;
+            background-color: #2b2b2b;
+
+        }
+    </style>
+    
+</body>
+</html>
+
+<script>
+    const pyButton = document.getElementById("python-button")
+    const jlButton = document.getElementById("julia-button")
+    const parag = document.getElementById("code-input")
+
+    window.onload = function(){
+        pyButton.classList.add("change")
         fetch("../CodeFiles/mobiusfunction.py")
         .then(response => response.text())
         .then(text => {
             parag.textContent = text
-            pyButton.style.borderBottom="none";
-            pyButton.style.borderTop= "solid";
-            pyButton.style.borderLeft= "solid";
-            pyButton.style.borderBlockColor=rgb(0, 208, 255);
-            pyButton.style.borderRight="solid";
-            pyButton.style.backgroundColor = "#2b2b2b"
-            pyButton.onclick = function(){
-                parag.textContent = text
-            }
         })
+    }
+    pyButton.onclick = function(){
+        jlButton.classList.remove("change")
+        pyButton.classList.add("change")
+        fetch("../CodeFiles/mobiusfunction.py")
+        .then(response => response.text())
+        .then(text => {
+            parag.textContent = text
+        })
+    }
+
+    jlButton.onclick = function(){
+        pyButton.classList.remove("change")
+        jlButton.classList.add("change")
         fetch("../CodeFiles/mobiusfunction.jl")
         .then(response => response.text())
         .then(text => {
-            jlButton.onclick = function(){
-                parag.textContent = text
-            }
+            parag.textContent = text
         })
-        // outputs the content of the text file
-    </script>
-    -->
-</body>
-</html>
+    }        
+</script>
