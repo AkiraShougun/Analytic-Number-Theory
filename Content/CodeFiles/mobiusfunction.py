@@ -39,8 +39,3 @@ def mobius(N) :
         return -1
     else :
         return 1
- 
-# Driver Code
-print("Mobius numbers from 1..99:")
-      
-print(mobius(3))
