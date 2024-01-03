@@ -144,3 +144,7 @@ a{
 .radio-item [type="radio"]:checked ~ label::after {
     border-color:rgb(0, 208, 255);
 }
+
+.reference-section{
+	border-top: solid rgb(0, 208, 255);
+}

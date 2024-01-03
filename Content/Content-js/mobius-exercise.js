@@ -7,6 +7,7 @@ window.addEventListener('load', function() {
     const header = document.createElement("h2")
     const parag = document.createElement("p")
     const section = document.querySelector(".radio-sec")
+    parag.innerText = "gcd(2024,2023)=1 because 2023 and 2024 are relatively prime. Now applying theorem 1.1 we see that the final answer is 1."
 
 
 
@@ -14,7 +15,6 @@ window.addEventListener('load', function() {
         if(first.checked) {
             header.innerText = "Incorrect"
             header.classList.add("border-header")
-            parag.innerText = "This is the wrong answer"
             section.appendChild(header)
             section.appendChild(parag)
         }
@@ -24,7 +24,6 @@ window.addEventListener('load', function() {
         if(second.checked) {
             header.innerText = "Correct"
             header.classList.add("border-header")
-            parag.innerText = "This is the correct answer"
             section.appendChild(header)
             section.appendChild(parag)
         }
@@ -34,7 +33,6 @@ window.addEventListener('load', function() {
         if(third.checked) {
             header.innerText = "Incorrect"
             header.classList.add("border-header")
-            parag.innerText = "This is the wrong answer"
             section.appendChild(header)
             section.appendChild(parag)
 
@@ -45,7 +43,6 @@ window.addEventListener('load', function() {
         if(fourth.checked) {
             header.innerText = "Incorrect"
             header.classList.add("border-header")
-            parag.innerText = "This is the wrong answer"
             section.appendChild(header)
             section.appendChild(parag)
         }
